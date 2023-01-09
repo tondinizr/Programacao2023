@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title class="title">&ltProgramação/&gt 🧑‍💻</title>
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/png">
+    <link rel="icon" href="/assets/img/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/anka-coder" type="text/css" />
+    <script src="https://use.fontawesome.com/3173ae4f9b.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:site_name" content="&ltProgramação/&gt">
+    <meta property="og:title" content="&ltProgramação/&gt">
+    <meta property="og:description" content="Conteúdo de apoio aos estudos do curso de programação da ONG Projeto Emanuel">
+</head>
+
+<body>
+    <!-- Início Header -->
+    <header>
+        <div class="logo">
+            <img decoding="async" src="/assets/img/logo.png" alt="Logo">
+            <span>&lt<span>programação</span>/&gt</span>
+        </div>
+        <div class="hamburger">
+            <div class="bars1"></div>
+            <div class="bars2"></div>
+            <div class="bars3"></div>
+        </div>
+        <ul class="nav-links">
+
+            <li>
+                <a onclick="checkModal('modal_HTML')">HTML</a>
+            </li>
+            <li>
+                <a onclick="checkModal('modal_CSS')">CSS</a>
+            </li>
+            <li>
+                <a onclick="checkModal('modal_JS')">JavaScript</a>
+            </li>
+            <li>
+                <a onclick="checkModal('modal_OTHER')">Outros</a>
+            </li>
+        </ul>
+    </header>
+    <!-- Fim Header -->
+    <!-- Início Main -->
+    <main>
+        <img class="cover" src="/assets/img/capa-programacao.jpg" alt="">
+
+        <p>Aqui vai o conteudo da pagina</p>
+    </main>
+    <!-- Fim Main -->
+    <!-- Início Footer -->
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="assets/img/logo.png">
+            <h3>ONG <span>Projeto Emanuel</span></h3>
+
+            <p class="footer-company-name">© 2023 Curso de Programação</p>
+        </div>
+
+        <div class="footer-center">
+            <a href="https://goo.gl/maps/FBV8FmMurcskcfbS6" target="_blank">
+                <i class="fa fa-map-marker"></i>
+                <p>
+                    <span>R. Leonel Pântano, 290, Jardim Dona Regina, Santa Bárbara d'Oeste-SP, 13455-727</span>
+                </p>
+            </a>
+
+            <a href="https://api.whatsapp.com/send?phone=5519984196915" target="_blank">
+                <i class="fa fa-whatsapp"></i>
+                <p>
+                    <span>(19) 98419-6915</span>
+                </p>
+            </a>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre a ONG</span>
+                A <strong>ONG Projeto Emanuel</strong> é uma organização sem fins lucrativos, que atua junto a crianças,
+                adolescentes e adultos.
+                <br>O projeto iniciou em abril de 2012.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/Projetoemanuel1" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/projetoemanuel1" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@projetoemanuel1" target="_blank"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim Footer -->
+
+    <!-- Início HTML -->
+    <div id="modal_HTML" class="modal modal_closed" onclick="checkClose(event)">
+        <div id="modal-content" class="modal-content" >
+            <div class="modal-header">
+                <h1>Conteúdo de apoio HTML</h1>
+                <div class="modal-header-btns">
+                    <button class="btn btn_green"></button>
+                    <button class="btn btn_yellow"></button>
+                    <button class="btn btn_red" onclick="closeModal()"></button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
+                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
+                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
+                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
+                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
+                    amet scelerisque augue.</p>
+            </div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    <!-- FIM HTML -->
+    <!-- Início CSS -->
+    <div id="modal_CSS" class="modal modal_closed" onclick="checkClose(event)">
+        <div id="modal-content" class="modal-content" >
+            <div class="modal-header">
+                <h1>Conteúdo de apoio CSS</h1>
+                <div class="modal-header-btns">
+                    <button class="btn btn_green"></button>
+                    <button class="btn btn_yellow"></button>
+                    <button class="btn btn_red" onclick="closeModal()"></button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
+                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
+                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
+                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
+                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
+                    amet scelerisque augue.</p>
+            </div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    <!-- FIM CSS -->
+    <!-- Início JS -->
+    <div id="modal_JS" class="modal modal_closed" onclick="checkClose(event)">
+        <div id="modal-content" class="modal-content" >
+            <div class="modal-header">
+                <h1>Conteúdo de apoio JS</h1>
+                <div class="modal-header-btns">
+                    <button class="btn btn_green"></button>
+                    <button class="btn btn_yellow"></button>
+                    <button class="btn btn_red" onclick="closeModal()"></button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
+                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
+                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
+                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
+                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
+                    amet scelerisque augue.</p>
+            </div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    <!-- FIM JS -->
+    <!-- Início OTHER -->
+    <div id="modal_OTHER" class="modal modal_closed" onclick="checkClose(event)">
+        <div id="modal-content" class="modal-content" >
+            <div class="modal-header">
+                <h1>Conteúdo de apoio OTHER</h1>
+                <div class="modal-header-btns">
+                    <button class="btn btn_green"></button>
+                    <button class="btn btn_yellow"></button>
+                    <button class="btn btn_red" onclick="closeModal()"></button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
+                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
+                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
+                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
+                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
+                    amet scelerisque augue.</p>
+            </div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    <!-- FIM OTHER -->
+</body>
+<script type="text/javascript" src="./script/script.js"></script>
+
+</html>
