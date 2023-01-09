@@ -34,16 +34,16 @@
         <ul class="nav-links">
 
             <li>
-                <a onclick="checkModal('modal_HTML')">HTML</a>
+                <a id="openModalHTML">HTML</a>
             </li>
             <li>
-                <a onclick="checkModal('modal_CSS')">CSS</a>
+                <a id="openModalCSS">CSS</a>
             </li>
             <li>
-                <a onclick="checkModal('modal_JS')">JavaScript</a>
+                <a id="openModalJS">JavaScript</a>
             </li>
             <li>
-                <a onclick="checkModal('modal_OTHER')">Outros</a>
+                <a id="openModalOTHER">Outros</a>
             </li>
         </ul>
     </header>
@@ -96,111 +96,28 @@
     </footer>
     <!-- Fim Footer -->
 
-    <!-- Início HTML -->
-    <div id="modal_HTML" class="modal modal_closed" onclick="checkClose(event)">
+    <!-- Início MODAL -->
+    <div id="modal" class="modal modal_closed">
         <div id="modal-content" class="modal-content" >
             <div class="modal-header">
-                <h1>Conteúdo de apoio HTML</h1>
+                <h1 class="modal-header-title">Conteúdo de apoio NAME</h1>
                 <div class="modal-header-btns">
                     <button class="btn btn_green"></button>
                     <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
+                    <button id="closeModal" class="btn btn_red"></button>
                 </div>
             </div>
 
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
+            <div id="modal-body" class="modal-body">
             </div>
 
             <div class="modal-footer">
             </div>
         </div>
     </div>
-    <!-- FIM HTML -->
-    <!-- Início CSS -->
-    <div id="modal_CSS" class="modal modal_closed" onclick="checkClose(event)">
-        <div id="modal-content" class="modal-content" >
-            <div class="modal-header">
-                <h1>Conteúdo de apoio CSS</h1>
-                <div class="modal-header-btns">
-                    <button class="btn btn_green"></button>
-                    <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
-            </div>
-
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-    <!-- FIM CSS -->
-    <!-- Início JS -->
-    <div id="modal_JS" class="modal modal_closed" onclick="checkClose(event)">
-        <div id="modal-content" class="modal-content" >
-            <div class="modal-header">
-                <h1>Conteúdo de apoio JS</h1>
-                <div class="modal-header-btns">
-                    <button class="btn btn_green"></button>
-                    <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
-            </div>
-
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-    <!-- FIM JS -->
-    <!-- Início OTHER -->
-    <div id="modal_OTHER" class="modal modal_closed" onclick="checkClose(event)">
-        <div id="modal-content" class="modal-content" >
-            <div class="modal-header">
-                <h1>Conteúdo de apoio OTHER</h1>
-                <div class="modal-header-btns">
-                    <button class="btn btn_green"></button>
-                    <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
-            </div>
-
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-    <!-- FIM OTHER -->
+    <!-- FIM MODAL -->
 </body>
-<script type="text/javascript" src="./script/script.js"></script>
+<script type="module" src="./script/script.js"></script>
+<script type="module" src="./script/trick.js"></script>
 
 </html>

@@ -1,6 +1,16 @@
+import { injectHmtl } from './modalHtml.js';
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
+
+const modal = document.querySelector("#modal");
+const openModalHTML = document.querySelector("#openModalHTML");
+const openModalCSS = document.querySelector("#openModalCSS");
+const openModalJS = document.querySelector("#openModalJS");
+const openModalOTHER = document.querySelector("#openModalOTHER");
+const closeModalBtn = document.querySelector("#closeModal");
+
 let openedMenu = false;
 let openedModal = null;
 
@@ -21,7 +31,43 @@ if(hamburger){
     });
 }
 
-function checkModal(id){
+if(modal){
+    modal.addEventListener('click', (e)=>{
+        checkClose(e);
+    });
+}
+
+if(openModalHTML){
+    openModalHTML.addEventListener('click', ()=>{
+        checkModal('HTML');
+    });
+}
+
+if(openModalCSS){
+    openModalCSS.addEventListener('click', ()=>{
+        checkModal('CSS');
+    });
+}
+
+if(openModalJS){
+    openModalJS.addEventListener('click', ()=>{
+        checkModal('JS');
+    });
+}
+
+if(openModalOTHER){
+    openModalOTHER.addEventListener('click', ()=>{
+        checkModal('OTHER');
+    });
+}
+
+if(closeModalBtn){
+    closeModalBtn.addEventListener('click', ()=>{
+        closeModal();
+    });
+}
+
+export function checkModal(id){
     if(openedMenu){
         hamburger.click();
     }
@@ -43,7 +89,7 @@ function checkModal(id){
 
 function openModal(mn) {
     openedModal = mn;
-    let modal = document.getElementById(mn);
+    let modal = document.getElementById('modal');
 
     if (typeof modal == 'undefined' || modal === null)
         return;
@@ -53,12 +99,13 @@ function openModal(mn) {
     setTimeout(() => {
         modal.classList.add('modal_open'); 
         modal.classList.remove('modal_closed');
+        injectHmtl(openedModal, modal);
     }, 10);
 }
 
 function closeModal() {
     
-    let modal = document.getElementById(openedModal);
+    let modal = document.getElementById('modal');
 
     if (typeof modal == 'undefined' || modal === null)
         return;
@@ -70,11 +117,11 @@ function closeModal() {
     modal.classList.add('modal_closed');
     modal.classList.remove('modal_open'); 
     document.body.style.overflow = 'auto';
+    modal.querySelector('.modal-header-title').innerHTML = "Conteúdo de apoio NAME";
 }
 
 function checkClose(e) {
-    const modais = ['modal_HTML', 'modal_CSS', 'modal_JS', 'modal_OTHER'];
-    if(modais.includes(e.srcElement.id)){
+    if(e.srcElement.id === 'modal'){
         closeModal();
     } 
  }
