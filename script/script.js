@@ -66,7 +66,7 @@ function closeModal() {
     setTimeout(() => {
        modal.classList.remove('modal-display_open'); 
         openedModal = null;
-    }, 300);
+    }, 400);
     modal.classList.add('modal_closed');
     modal.classList.remove('modal_open'); 
     document.body.style.overflow = 'auto';
