@@ -11,6 +11,13 @@ const openModalJS = document.querySelector("#openModalJS");
 const openModalOTHER = document.querySelector("#openModalOTHER");
 const closeModalBtn = document.querySelector("#closeModal");
 
+const transparencia = [
+    '.code',
+    '.text',
+    '.content',
+    '.modal-footer'
+]
+
 let openedMenu = false;
 let openedModal = null;
 
@@ -39,25 +46,53 @@ if(modal){
 
 if(openModalHTML){
     openModalHTML.addEventListener('click', ()=>{
-        checkModal('HTML');
+        if(openedModal){
+            closeModal();
+            setTimeout(() => {
+                checkModal('HTML');
+            }, 700);
+        } else {
+            checkModal('HTML');
+        }
     });
 }
 
 if(openModalCSS){
     openModalCSS.addEventListener('click', ()=>{
-        checkModal('CSS');
+        if(openedModal){
+            closeModal();
+            setTimeout(() => {
+                checkModal('CSS');
+            }, 700);
+        } else {
+            checkModal('CSS');
+        }
     });
 }
 
 if(openModalJS){
     openModalJS.addEventListener('click', ()=>{
-        checkModal('JS');
+        if(openedModal){
+            closeModal();
+            setTimeout(() => {
+                checkModal('JS');
+            }, 700);
+        } else {
+            checkModal('JS');
+        }
     });
 }
 
 if(openModalOTHER){
     openModalOTHER.addEventListener('click', ()=>{
-        checkModal('OTHER');
+        if(openedModal){
+            closeModal();
+            setTimeout(() => {
+                checkModal('OTHER');
+            }, 700);
+        } else {
+            checkModal('OTHER');
+        }
     });
 }
 
@@ -90,10 +125,12 @@ export function checkModal(id){
 function openModal(mn) {
     openedModal = mn;
     let modal = document.getElementById('modal');
+    let modalFooter = modal.querySelector('.modal-footer');
 
     if (typeof modal == 'undefined' || modal === null)
         return;
-
+        
+    modalFooter.classList.remove('transparente'); 
     modal.classList.add('modal-display_open'); 
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
@@ -107,8 +144,21 @@ function closeModal() {
     
     let modal = document.getElementById('modal');
 
+    for (var item of transparencia){
+        let items = modal.querySelectorAll(item);
+        for (var child of items){
+            child.classList.add('transparente');
+        }   
+    } 
+
     if (typeof modal == 'undefined' || modal === null)
         return;
+
+    const modalBody = modal.querySelector('#modal-body');
+
+    for (var child of modalBody.childNodes){
+        child.remove();
+    }   
     
     setTimeout(() => {
        modal.classList.remove('modal-display_open'); 

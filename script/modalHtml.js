@@ -1,7 +1,10 @@
+import { htmlTemplate } from './modals/html.js';
+
+
 const HTMLmodal = {
     HTML: {
         titulo: 'HTML',
-        content : '<div><p>HTML</p></div>'
+        content : htmlTemplate
     },
     CSS: {
         titulo: 'CSS',
