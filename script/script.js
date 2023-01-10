@@ -15,7 +15,8 @@ const transparencia = [
     '.code',
     '.text',
     '.content',
-    '.modal-footer'
+    '.modal-body',
+    '.modal-footer',
 ]
 
 let openedMenu = false;
@@ -125,11 +126,13 @@ export function checkModal(id){
 function openModal(mn) {
     openedModal = mn;
     let modal = document.getElementById('modal');
+    let modalBody = modal.querySelector('.modal-body');
     let modalFooter = modal.querySelector('.modal-footer');
 
     if (typeof modal == 'undefined' || modal === null)
         return;
         
+    modalBody.classList.remove('transparente'); 
     modalFooter.classList.remove('transparente'); 
     modal.classList.add('modal-display_open'); 
     document.body.style.overflow = 'hidden';

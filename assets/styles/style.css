@@ -610,6 +610,8 @@ pre.code {
     background-color: transparent !important;
     height: 0;
     width: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
 
   
