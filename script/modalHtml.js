@@ -1,4 +1,5 @@
 import { htmlTemplate } from './modals/html.js';
+import { cssTemplate } from './modals/css.js';
 
 
 const HTMLmodal = {
@@ -8,7 +9,7 @@ const HTMLmodal = {
     },
     CSS: {
         titulo: 'CSS',
-        content : '<div><p>CSS</p></div>'
+        content : cssTemplate
     },
     JS: {
         titulo: 'JAVASCRIPT',
@@ -22,6 +23,14 @@ const HTMLmodal = {
 
 export  function injectHmtl(type, elem){
     var modal = HTMLmodal[type];
+
+    window.addEventListener('keyup', (e) => {
+        if(e.key === 'Escape'){
+            console.log('escape pressionado')
+            const closeEvent = new Event('closeModalEv');
+            elem.dispatchEvent(closeEvent);
+        };
+    });
 
     var modalTitle = "";
     modalTitle = elem.querySelector('.modal-header-title').innerHTML;

@@ -141,6 +141,7 @@ function openModal(mn) {
         modal.classList.remove('modal_closed');
         injectHmtl(openedModal, modal);
     }, 10);
+    modal.addEventListener('closeModalEv', closeModal);    
 }
 
 function closeModal() {

@@ -576,6 +576,29 @@ footer{
     color: #e7d868;
 }
 
+.blizzardBlue{
+    color: #5bc0e1;
+}
+
+.gainsboro{
+    color: #e0dcdb;
+}
+
+.peacockBlue-bg{
+    background-color: #053742;
+    padding: 0 1px;
+    border-radius: 4px;
+}
+
+.badge{
+    background-color: #8795A2;
+    border-radius: 4px;
+    color: #EAEFF2;
+    font-style: normal;
+    padding: 2px 4px;
+    font-size: 14px;
+}
+
 pre.code {
     white-space: pre-wrap;
   }
