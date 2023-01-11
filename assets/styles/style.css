@@ -434,14 +434,47 @@ footer{
     color: #000;
 }
 
-.modal-header button:focus{
+.modal-header button.btn_close .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #053742;
+    text-shadow: 1.3px 1.3px #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -4px;
+    right: 130%;
+    box-shadow: 0px 0px 0px 3.3px rgba(0,0,0,1);
+}
+  
+.modal-header button.btn_close .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    margin-left: 3px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.modal-header button.btn_close:hover .tooltiptext,
+.modal-header button.btn_close:focus .tooltiptext {
+    visibility: visible;
+}
+
+.modal-header button.btn_close:focus{
     outline: thin dotted;
     outline: 0px auto -webkit-focus-ring-color;
     outline-offset: 0px;
     transform: scale(0.9);
 }
 
-.modal-header button.btn_close:focus{
+.modal-header button.btn_close:active{
     transform: scale(0.1) rotate(-680deg);
 }
 
@@ -470,7 +503,15 @@ footer{
 .modal-body p, h3, strong{
     color: #053742;
     text-shadow: 1.3px 1.3px #d3d3d3;
+    transition: all 0.7s ease;
+}
 
+.modal-body h3:focus,
+.modal-body p:focus{
+    color: #162929;
+    outline: none;
+    font-weight: bold;
+    transform: scale(1.02);
 }
 
 .modal-body  strong{

@@ -21,21 +21,21 @@
 
 <body>
     <!-- Início Header -->
-    <header>
+    <header id="header">
         <div class="logo">
             <img decoding="async" src="assets/img/logo.png" alt="Logo">
             <span>&lt<span>programação</span>/&gt</span>
         </div>
-        <div class="hamburger" tabindex="1">
+        <div onclick="handleClick('MENU')" class="hamburger clickable" tabindex="1">
             <div class="bars1"></div>
             <div class="bars2"></div>
             <div class="bars3"></div>
         </div>
         <div class="nav-links">
-            <a id="openModalHTML" tabindex="2">HTML</a>
-            <a id="openModalCSS" tabindex="3">CSS</a>
-            <a id="openModalJS" tabindex="4">JavaScript</a>
-            <a id="openModalOTHER" tabindex="5">Outros</a>
+            <a onclick="handleClick('HTML')" class="clickable" tabindex="2">HTML</a>
+            <a onclick="handleClick('CSS')" class="clickable" tabindex="3">CSS</a>
+            <a onclick="handleClick('JS')" class="clickable" tabindex="4">JavaScript</a>
+            <a onclick="handleClick('OTHER')" class="clickable" tabindex="5">Outros</a>
         </div>
     </header>
     <!-- Fim Header -->
@@ -44,8 +44,8 @@
         <img class="cover" src="assets/img/capa-programacao.jpg" alt="">
         <section>
             <h2>🔗-Links Importantes</h2>
-            <a href="#"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-            <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Material</a>
+            <a href="https://github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+            <a href="https://drive.google.com/drive/folders/1-6zb_F2lIlyRo5OX40GbaT_Xk0MoJ3y2?usp=sharing" target="_blank"><i class="fa fa-book" aria-hidden="true"></i> Material</a>
         </section>
         <section>
             <h2>📖-Cursos Gratuitos</h2>
@@ -110,8 +110,9 @@
                 <div class="modal-header-btns">
                     <button class="btn btn_minimize"></button>
                     <button class="btn btn_maximize"></button>
-                    <button id="closeModal" class="btn btn_close">
+                    <button onclick="handleClick('CLOSE')" class="btn btn_close clickable">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg>
+                        <span class="tooltiptext">Fechar</span>
                     </button>
                 </div>
             </div>
@@ -127,5 +128,15 @@
 </body>
 <script type="module" src="./script/script.js"></script>
 <script type="module" src="./script/trick.js"></script>
+<script>
+    function handleClick(id) {
+        const clickEvent = new CustomEvent('clickHtml', {
+            detail: {
+                id: id
+            }
+        })
+        window.dispatchEvent(clickEvent);
+    }
+</script>
 
 </html>

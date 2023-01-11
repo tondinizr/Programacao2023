@@ -24,13 +24,7 @@ const HTMLmodal = {
 export  function injectHmtl(type, elem){
     var modal = HTMLmodal[type];
 
-    window.addEventListener('keyup', (e) => {
-        if(e.key === 'Escape'){
-            console.log('escape pressionado')
-            const closeEvent = new Event('closeModalEv');
-            elem.dispatchEvent(closeEvent);
-        };
-    });
+
 
     var modalTitle = "";
     modalTitle = elem.querySelector('.modal-header-title').innerHTML;
@@ -43,5 +37,4 @@ export  function injectHmtl(type, elem){
         child.remove();
     }
     modalBody.insertAdjacentHTML( 'beforeend', modal.content );
-
 }

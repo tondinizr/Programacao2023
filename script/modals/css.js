@@ -1,6 +1,6 @@
 export const cssTemplate = `
 <div class="content">
-    <h3 class="text">CSS básico</h3>
+    <h3 tabindex="0" class="text">CSS básico</h3>
     <a class="text" target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">
         🧑‍💻 MDN Web Docs
     </a>
@@ -26,11 +26,11 @@ export const cssTemplate = `
         <code class="text">     <span class="purpleNavy">color</span><span class="brilliantRose">:</span><span class="peacockBlue-bg">#053742</span><span class="gainsboro">;</span></code>
         <code class="text"> <span class="arylideYellow">}</span></code>
     </pre>
-    <p class="text"><strong class="text">Linha 1:</strong><span class="badge">TAG NAME</span> utilizamos o seletor para estilizar as tags html especificadas;</p>
+    <p tabindex="0" class="text"><strong class="text">Linha 1:</strong><span class="badge">TAG NAME</span> utilizamos o seletor para estilizar as tags html especificadas;</p>
     <br>
-    <p class="text"><strong class="text">Linhas 5:</strong><span class="badge">CLASS NAME</span> definida no html no atributo class, com esse seletor aplicamos o estilo nas tags que possuem essa classe</p>
+    <p tabindex="0" class="text"><strong class="text">Linhas 5:</strong><span class="badge">CLASS NAME</span> definida no html no atributo class, com esse seletor aplicamos o estilo nas tags que possuem essa classe</p>
     <br>
-    <p class="text"><strong class="text">Linhas 5:</strong><span class="badge">ID</span> definido no html o atributo id (que é aconselhável ser unico) para o estilo ser aplicado na tag que possua esse identificador</p>
+    <p tabindex="0" class="text"><strong class="text">Linhas 5:</strong><span class="badge">ID</span> definido no html o atributo id (que é aconselhável ser unico) para o estilo ser aplicado na tag que possua esse identificador</p>
 </div>
 `;
 
