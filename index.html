@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <title class="title">&ltProgramação/&gt 🧑‍💻</title>
-    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/png">
-    <link rel="icon" href="/assets/img/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/anka-coder" type="text/css" />
     <script src="https://use.fontawesome.com/3173ae4f9b.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/styles/style.css">
-    <meta property="og:image" content="/assets/img/logo.png">
-    <meta property="og:site_name" content="&ltProgramação/&gt">
-    <meta property="og:title" content="&ltProgramação/&gt">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:site_name" content="<PROGRAMAÇÃO/>">
+    <meta property="og:title" content="<PROGRAMAÇÃO/>">
     <meta property="og:description" content="Conteúdo de apoio aos estudos do curso de programação da ONG Projeto Emanuel">
 </head>
 
@@ -23,36 +23,43 @@
     <!-- Início Header -->
     <header>
         <div class="logo">
-            <img decoding="async" src="/assets/img/logo.png" alt="Logo">
+            <img decoding="async" src="assets/img/logo.png" alt="Logo">
             <span>&lt<span>programação</span>/&gt</span>
         </div>
-        <div class="hamburger">
+        <div class="hamburger" tabindex="1">
             <div class="bars1"></div>
             <div class="bars2"></div>
             <div class="bars3"></div>
         </div>
-        <ul class="nav-links">
-
-            <li>
-                <a onclick="checkModal('modal_HTML')">HTML</a>
-            </li>
-            <li>
-                <a onclick="checkModal('modal_CSS')">CSS</a>
-            </li>
-            <li>
-                <a onclick="checkModal('modal_JS')">JavaScript</a>
-            </li>
-            <li>
-                <a onclick="checkModal('modal_OTHER')">Outros</a>
-            </li>
-        </ul>
+        <div class="nav-links">
+            <a id="openModalHTML" tabindex="2">HTML</a>
+            <a id="openModalCSS" tabindex="3">CSS</a>
+            <a id="openModalJS" tabindex="4">JavaScript</a>
+            <a id="openModalOTHER" tabindex="5">Outros</a>
+        </div>
     </header>
     <!-- Fim Header -->
     <!-- Início Main -->
     <main>
-        <img class="cover" src="/assets/img/capa-programacao.jpg" alt="">
+        <img class="cover" src="assets/img/capa-programacao.jpg" alt="">
+        <section>
+            <h2>🔗-Links Importantes</h2>
+            <a href="#"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+            <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Material</a>
+        </section>
+        <section>
+            <h2>📖-Cursos Gratuitos</h2>
+            <a href="https://www.rocketseat.com.br/discover" target="_blank"><i class="fa fa-rocket" aria-hidden="true"></i> RocketSeat - Discover</a>
+            <a href="https://www.dio.me/" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Digital Innovation One</a>
+        </section>
+        <section>
+            <h2>🍿-Filmes e Séries Recomendados</h2>
+            <a href="https://www.netflix.com/watch/70295172" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i> O Jogo da Imitação</a>
+            <a href="https://www.netflix.com/watch/70132721" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i> A Rede Social</a>
+            <a href="https://www.netflix.com/watch/70267266" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Jobs</a>
+            <a href="https://www.primevideo.com/detail/0MNO8X67EVOHSPU008L4SIVNR7" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Mr. Robot</a>
+        </section>
 
-        <p>Aqui vai o conteudo da pagina</p>
     </main>
     <!-- Fim Main -->
     <!-- Início Footer -->
@@ -95,112 +102,30 @@
         </div>
     </footer>
     <!-- Fim Footer -->
-
-    <!-- Início HTML -->
-    <div id="modal_HTML" class="modal modal_closed" onclick="checkClose(event)">
+    <!-- Início MODAL -->
+    <div id="modal" class="modal modal_closed">
         <div id="modal-content" class="modal-content" >
             <div class="modal-header">
-                <h1>Conteúdo de apoio HTML</h1>
+                <h1 class="modal-header-title">Conteúdo de apoio NAME</h1>
                 <div class="modal-header-btns">
-                    <button class="btn btn_green"></button>
-                    <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
+                    <button class="btn btn_minimize"></button>
+                    <button class="btn btn_maximize"></button>
+                    <button id="closeModal" class="btn btn_close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg>
+                    </button>
                 </div>
             </div>
 
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
+            <div id="modal-body" class="modal-body">
             </div>
 
             <div class="modal-footer">
             </div>
         </div>
     </div>
-    <!-- FIM HTML -->
-    <!-- Início CSS -->
-    <div id="modal_CSS" class="modal modal_closed" onclick="checkClose(event)">
-        <div id="modal-content" class="modal-content" >
-            <div class="modal-header">
-                <h1>Conteúdo de apoio CSS</h1>
-                <div class="modal-header-btns">
-                    <button class="btn btn_green"></button>
-                    <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
-            </div>
-
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-    <!-- FIM CSS -->
-    <!-- Início JS -->
-    <div id="modal_JS" class="modal modal_closed" onclick="checkClose(event)">
-        <div id="modal-content" class="modal-content" >
-            <div class="modal-header">
-                <h1>Conteúdo de apoio JS</h1>
-                <div class="modal-header-btns">
-                    <button class="btn btn_green"></button>
-                    <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
-            </div>
-
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-    <!-- FIM JS -->
-    <!-- Início OTHER -->
-    <div id="modal_OTHER" class="modal modal_closed" onclick="checkClose(event)">
-        <div id="modal-content" class="modal-content" >
-            <div class="modal-header">
-                <h1>Conteúdo de apoio OTHER</h1>
-                <div class="modal-header-btns">
-                    <button class="btn btn_green"></button>
-                    <button class="btn btn_yellow"></button>
-                    <button class="btn btn_red" onclick="closeModal()"></button>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-                    Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-                    nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-                    faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-                    amet scelerisque augue.</p>
-            </div>
-
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-    <!-- FIM OTHER -->
+    <!-- FIM MODAL -->
 </body>
-<script type="text/javascript" src="./script/script.js"></script>
+<script type="module" src="./script/script.js"></script>
+<script type="module" src="./script/trick.js"></script>
 
 </html>
